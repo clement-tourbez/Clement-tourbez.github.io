@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Test de R Markdown</title>
+  <meta name="description" content="Test de R Markdown">
+  <meta name="generator" content="bookdown <!--bookdown:version--> and GitBook 2.6.7">
+
+  <meta property="og:title" content="Test de R Markdown" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Test de R Markdown" />
+  
+  
+  
+
+<meta name="author" content="clement tourbez">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }  
+code > span.dt { color: #902000; }  
+code > span.dv { color: #40a070; }  
+code > span.bn { color: #40a070; }  
+code > span.fl { color: #40a070; }  
+code > span.ch { color: #4070a0; }  
+code > span.st { color: #4070a0; }  
+code > span.co { color: #60a0b0; font-style: italic; }  
+code > span.ot { color: #007020; }  
+code > span.al { color: #ff0000; font-weight: bold; }  
+code > span.fu { color: #06287e; }  
+code > span.er { color: #ff0000; font-weight: bold; }  
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; }  
+code > span.cn { color: #880000; }  
+code > span.sc { color: #4070a0; }  
+code > span.vs { color: #4070a0; }  
+code > span.ss { color: #bb6688; }  
+code > span.im { }  
+code > span.va { color: #19177c; }  
+code > span.cf { color: #007020; font-weight: bold; }  
+code > span.op { color: #666666; }  
+code > span.bu { }  
+code > span.ex { }  
+code > span.pp { color: #bc7a00; }  
+code > span.at { color: #7d9029; }  
+code > span.do { color: #ba2121; font-style: italic; }  
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; }  
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; }  
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; }  
+</style>
+
+</head>
+
+<body>
+
+
+
+
+<div id="header">
+<h1 class="title">Test de R Markdown</h1>
+<h4 class="author"><em>clement tourbez</em></h4>
+</div>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Test de R Markdown</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+
+
+<p>Dans un document R Markdown on peut utiliser naturellement la syntaxe <strong>Markdown</strong>, mais aussi du code R dans des “chunks”, comme ci-dessous pour générer un graphique (Fig. @ref(fig:pie)) :</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>))
+<span class="kw">pie</span>(
+  <span class="kw">c</span>(<span class="dv">280</span>, <span class="dv">60</span>, <span class="dv">20</span>),
+  <span class="kw">c</span>(<span class="st">&#39;Sky&#39;</span>, <span class="st">&#39;Sunny side of pyramid&#39;</span>, <span class="st">&#39;Shady side of pyramid&#39;</span>),
+  <span class="dt">col =</span> <span class="kw">c</span>(<span class="st">&#39;#0292D8&#39;</span>, <span class="st">&#39;#F7EA39&#39;</span>, <span class="st">&#39;#C4B632&#39;</span>),
+  <span class="dt">init.angle =</span> <span class="op">-</span><span class="dv">50</span>, <span class="dt">border =</span> <span class="ot">NA</span>
+)</code></pre></div>
+<div class="figure">
+<img src="_main_files/figure-html/pie-1.png" alt="Un superbe graphique en camembert." width="672" />
+<p class="caption">
+(#fig:pie)Un superbe graphique en camembert.
+</p>
+</div>
+
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+
+</body>
+
+</html>
